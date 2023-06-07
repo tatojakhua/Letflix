@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/LetFlix/static/css/main.b7662109.css",
-    "main.js": "/LetFlix/static/js/main.f0f77f92.js",
-    "index.html": "/LetFlix/index.html",
-    "main.b7662109.css.map": "/LetFlix/static/css/main.b7662109.css.map",
-    "main.f0f77f92.js.map": "/LetFlix/static/js/main.f0f77f92.js.map"
+    "main.css": "/Letflix/static/css/main.b7662109.css",
+    "main.js": "/Letflix/static/js/main.9590437b.js",
+    "index.html": "/Letflix/index.html",
+    "main.b7662109.css.map": "/Letflix/static/css/main.b7662109.css.map",
+    "main.9590437b.js.map": "/Letflix/static/js/main.9590437b.js.map"
   },
   "entrypoints": [
     "static/css/main.b7662109.css",
-    "static/js/main.f0f77f92.js"
+    "static/js/main.9590437b.js"
   ]
 }
