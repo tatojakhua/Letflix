@@ -61,10 +61,11 @@ const Detail = () => {
         <h1 className="banner_title">{state?.movie?.title}</h1>
         <h1 className="banner_description">{state?.movie?.description}</h1>
         <div className="rating">
+          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
           <lord-icon
-            src="https://cdn.lordicon.com/mdgrhyca.json"
+            src="https://cdn.lordicon.com/whttoese.json"
             trigger="morph"
-            colors="primary:#121331,secondary:#08a88a"
+            colors="primary:#4be1ec,secondary:#cb5eee"
             style={{ width: "50px", height: "50px" }}
           ></lord-icon>
           {state?.movie?.rating}
