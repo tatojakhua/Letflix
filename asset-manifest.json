@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LetFlix/static/css/main.b7662109.css",
+    "main.js": "/LetFlix/static/js/main.f0f77f92.js",
+    "index.html": "/LetFlix/index.html",
+    "main.b7662109.css.map": "/LetFlix/static/css/main.b7662109.css.map",
+    "main.f0f77f92.js.map": "/LetFlix/static/js/main.f0f77f92.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b7662109.css",
+    "static/js/main.f0f77f92.js"
+  ]
+}
