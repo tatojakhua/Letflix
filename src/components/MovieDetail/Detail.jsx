@@ -61,7 +61,6 @@ const Detail = () => {
         <h1 className="banner_title">{state?.movie?.title}</h1>
         <h1 className="banner_description">{state?.movie?.description}</h1>
         <div className="rating">
-          <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
           <lord-icon
             src="https://cdn.lordicon.com/whttoese.json"
             trigger="morph"

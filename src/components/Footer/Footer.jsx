@@ -4,16 +4,18 @@ import styled from "styled-components";
 const FooterStyled = styled.div`
   position: fixed;
   display: flex;
+  width: 300;
+  bottom: 0px;
+  left: 40%;
+  margin: 600px 0 1px;
   align-items: end;
   justify-content: end;
-  margin-top: 600px;
-  left: 500px;
   p {
-    color: white;
+    color: #fdfefe;
     text-decoration: none;
   }
-  .text-warning {
-    color: #7d3c98;
+  p .text-warning {
+    color: #8e44ad;
   }
 `;
 
@@ -22,7 +24,7 @@ const Footer = () => {
     <FooterStyled>
       <p>
         Copyright ©2023 All rights reserved by:
-        <strong className="text-warning">NiceGuyZ</strong>
+        <strong className="text-warning"> NiceGuyZ</strong>
       </p>
     </FooterStyled>
   );
