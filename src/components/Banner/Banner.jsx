@@ -31,7 +31,8 @@ const BannerStyle = styled.header`
     height: 80px;
   }
   .banner--fadeButtom {
-    margin-top: 330px;
+    display: table-row;
+    vertical-align: bottom;
     height: 7.4rem;
     background-image: linear-gradient(
       180deg,
@@ -73,18 +74,18 @@ const Banner = () => {
       return response;
     }
     fetchData();
-    setInterval(() => {
-      async function fetchData() {
-        const response = await axios.get(request.fetchTrending);
-        setMovie(
-          response.data.results[
-            Math.floor(Math.random() * response.data.results.length)
-          ]
-        );
-        return response;
-      }
-      fetchData();
-    }, 10000);
+    // setInterval(() => {
+    //   async function fetchData() {
+    //     const response = await axios.get(request.fetchTrending);
+    //     setMovie(
+    //       response.data.results[
+    //         Math.floor(Math.random() * response.data.results.length)
+    //       ]
+    //     );
+    //     return response;
+    //   }
+    //   fetchData();
+    // }, 10000);
   }, []);
 
   const navigate = useNavigate();
