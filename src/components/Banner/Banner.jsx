@@ -30,9 +30,8 @@ const BannerStyle = styled.header`
     max-width: 360px;
     height: 80px;
   }
-  .banner--fadeButtom {
-    display: table-row;
-    vertical-align: bottom;
+  /* .banner--fadeButtom {
+    position: relative;
     height: 7.4rem;
     background-image: linear-gradient(
       180deg,
@@ -40,7 +39,7 @@ const BannerStyle = styled.header`
       rgba(37, 37, 37, 0.61),
       #111
     );
-  }
+  } */
   .banner_button {
     cursor: pointer;
     color: #fff;
@@ -74,20 +73,19 @@ const Banner = () => {
       return response;
     }
     fetchData();
-    // setInterval(() => {
-    //   async function fetchData() {
-    //     const response = await axios.get(request.fetchTrending);
-    //     setMovie(
-    //       response.data.results[
-    //         Math.floor(Math.random() * response.data.results.length)
-    //       ]
-    //     );
-    //     return response;
-    //   }
-    //   fetchData();
-    // }, 10000);
+    setInterval(() => {
+      async function fetchData() {
+        const response = await axios.get(request.fetchTrending);
+        setMovie(
+          response.data.results[
+            Math.floor(Math.random() * response.data.results.length)
+          ]
+        );
+        return response;
+      }
+      fetchData();
+    }, 10000);
   }, []);
-
   const navigate = useNavigate();
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + " ..." : string;
@@ -112,7 +110,7 @@ const Banner = () => {
         </div>
         <h1 className="banner_description">{truncate(Movie?.overview, 150)}</h1>
       </div>
-      <div className="banner--fadeButtom" />
+      {/* <div className="banner--fadeButtom" /> */}
     </BannerStyle>
   );
 };
