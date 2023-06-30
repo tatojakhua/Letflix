@@ -11,6 +11,7 @@ defineElement(lottie.loadAnimation);
 
 const NavBarStyle = styled.section`
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;

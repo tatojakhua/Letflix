@@ -5,7 +5,7 @@ import Banner from "../components/Banner/Banner";
 
 const AuthGuard = ({ children }) => {
   const { state } = useAuthContext();
-  return <div>{state.isAuthenticated ? children : <Banner />}</div>;
+  return <>{state.isAuthenticated ? children : <Banner />}</>;
 };
 
 export default AuthGuard;

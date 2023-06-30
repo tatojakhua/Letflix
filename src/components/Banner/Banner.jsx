@@ -11,13 +11,48 @@ const BannerStyle = styled.header`
   height: 100vh;
   color: white;
   object-fit: contain;
+
+  &::after {
+    content: "";
+    padding: 36px;
+    /* background: linear-gradient(#111, rgba(37, 37, 37, 0.157)); */
+    background-image: linear-gradient(
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      rgb(17, 17, 17)
+    );
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  &:before {
+    content: "";
+    height: 7.4rem;
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      #111
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   .banner_contents {
+    max-width: max-content;
     text-align: start;
     margin-left: 60px;
-    padding-top: 200px;
-    height: 190px;
+    top: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(51, 51, 51, 0.3);
+    position: relative;
   }
   .banner_title {
+    max-width: max-content;
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem;
@@ -28,18 +63,7 @@ const BannerStyle = styled.header`
     padding-top: 1rem;
     font-size: 1.2rem;
     max-width: 360px;
-    height: 80px;
   }
-  /* .banner--fadeButtom {
-    position: relative;
-    height: 7.4rem;
-    background-image: linear-gradient(
-      180deg,
-      transparent,
-      rgba(37, 37, 37, 0.61),
-      #111
-    );
-  } */
   .banner_button {
     cursor: pointer;
     color: #fff;
@@ -52,6 +76,7 @@ const BannerStyle = styled.header`
     margin-right: 1rem;
     padding-top: 0.5rem;
     background-color: rgba(51, 51, 51, 0.5);
+    box-shadow: 0 0 2px 4px rgba(255, 255, 255, 0.12);
     padding-bottom: 0.5rem;
   }
   .banner_button:hover {
@@ -73,18 +98,18 @@ const Banner = () => {
       return response;
     }
     fetchData();
-    setInterval(() => {
-      async function fetchData() {
-        const response = await axios.get(request.fetchTrending);
-        setMovie(
-          response.data.results[
-            Math.floor(Math.random() * response.data.results.length)
-          ]
-        );
-        return response;
-      }
-      fetchData();
-    }, 10000);
+    // setInterval(() => {
+    //   async function fetchData() {
+    //     const response = await axios.get(request.fetchTrending);
+    //     setMovie(
+    //       response.data.results[
+    //         Math.floor(Math.random() * response.data.results.length)
+    //       ]
+    //     );
+    //     return response;
+    //   }
+    //   fetchData();
+    // }, 10000);
   }, []);
   const navigate = useNavigate();
   function truncate(string, n) {
@@ -110,7 +135,6 @@ const Banner = () => {
         </div>
         <h1 className="banner_description">{truncate(Movie?.overview, 150)}</h1>
       </div>
-      {/* <div className="banner--fadeButtom" /> */}
     </BannerStyle>
   );
 };
