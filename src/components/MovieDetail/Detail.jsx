@@ -9,9 +9,9 @@ defineElement(lottie.loadAnimation);
 
 const DetailStyle = styled.div`
   background-color: #17202a;
-  embed {
+  iframe {
     width: 100%;
-    height: 98vh;
+    height: 100vh;
   }
   .back-button {
     position: absolute;
@@ -44,6 +44,7 @@ const DetailStyle = styled.div`
 
 const Detail = () => {
   const { state } = useAuthContext();
+  console.log(state);
   return (
     <DetailStyle>
       <div className="back-button">
@@ -56,7 +57,7 @@ const Detail = () => {
           ></lord-icon>
         </Link>
       </div>
-      <embed autoPlay src={state?.movie?.trailer}></embed>
+      <iframe src={state?.movie.trailer} title={state?.movie?.title}></iframe>
       <div className="banner_contents">
         <h1 className="banner_title">{state?.movie?.title}</h1>
         <h1 className="banner_description">{state?.movie?.description}</h1>
