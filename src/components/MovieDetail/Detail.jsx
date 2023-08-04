@@ -44,7 +44,6 @@ const DetailStyle = styled.div`
 
 const Detail = () => {
   const { state } = useAuthContext();
-  console.log(state);
   return (
     <DetailStyle>
       <div className="back-button">
