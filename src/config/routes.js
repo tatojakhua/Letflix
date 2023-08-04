@@ -5,36 +5,32 @@ import {
   NOT_FOUND,
   DETAILS,
 } from "../constants/routes";
-import Home from "../pages/home/Home";
-import SigUp from "../pages/signUp/SignUp";
-import SignIn from "../pages/signIn/SignIn";
-import Details from "../pages/MovieDetails/Details";
-import Error from "../pages/error/Error";
+import Pages from "../pages/index";
 import AuthenticateGuard from "../Guard/AuthenticateGuard";
 import GuestGuard from "../Guard/GuestGuard";
 export const routes = [
   {
     path: HOME_PAGE,
-    Component: Home,
+    Component: Pages.Home,
     Guard: AuthenticateGuard,
   },
   {
     path: DETAILS,
-    Component: Details,
+    Component: Pages.Details,
     Guard: AuthenticateGuard,
   },
   {
     path: SIGN_IN,
-    Component: SignIn,
+    Component: Pages.SignIn,
     Guard: GuestGuard,
   },
   {
     path: SIGN_UP,
-    Component: SigUp,
+    Component: Pages.SignUp,
     Guard: GuestGuard,
   },
   {
     path: NOT_FOUND,
-    Component: Error,
+    Component: Pages.Error,
   },
 ];
